@@ -5,16 +5,16 @@
     "keywords": ["php", "line-messaging-api"],
     "env": {
       "LINE_CHANNEL_ACCESS_TOKEN": {
-        "description": "Messaging API の Channel Access Tokenを指定してください。"
+        "description": "Messaging API の Channel Access Tokenを指定してください。",
+        "required": "true"
       },
       "BOT_MODE": {
-        "description": "DOCOMOの雑談対話APIを使用する場合には「DOCOMO」を設定してください。"
+        "description": "DOCOMOの雑談対話APIを使用する場合には「DOCOMO」を設定してください。",
+        "required": "false"
       },
       "DOCOMO_CHAT_API_KEY": {
-        "description": "DOCOMOの雑談対話APIを使用するために必要なAPI Keyを設定してください。"
-      },
-      "REDIS_URL": {
-        "description": "Add-On でREDISを追加したときに自動的に追加されます。"
+        "description": "DOCOMOの雑談対話APIを使用するために必要なAPI Keyを設定してください。",
+        "required": "false"
       }
     },
     "addons": [
