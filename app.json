@@ -16,11 +16,5 @@
         "description": "DOCOMOの雑談対話APIを使用するために必要なAPI Keyを設定してください。",
         "required": false
       }
-    },
-    "addons": [
-      "heroku-redis",
-      {
-        "plan": "hobby-dev"
-      }
-    ]
+    }
 }
