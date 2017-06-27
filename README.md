@@ -10,6 +10,9 @@ LINE向けチャットボットのサンプルです。
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 * heroku上にデプロイされます。
+* Redisは追加されません。自身での追加をお願いします。
+
+*DOCOMOの雑談対話APIでのやりとりを記憶するためにRedisを使用しています。*
 
 ## 環境変数
 
