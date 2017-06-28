@@ -90,7 +90,6 @@ docomo Developer support：https://dev.smt.docomo.ne.jp/
        *「雑談対話」を選択してください。
 1. 「docomo Developer support」の「API利用申請・管理」のアプリケーション情報でAPI Keyを確認してください。
 
-
 #### サーバーアプリの環境変数の更新
 
 1. 「Heroku」へログインします。
@@ -107,6 +106,38 @@ docomo Developer support：https://dev.smt.docomo.ne.jp/
 1. 「Add-ons」の下方にあるテキストボックスで「redis」と打ち込み「Heroku Redis」を選択してください。
 1. 「Plan name」で「Hobby Dev」を選択して、「Provision」を押下してください。
 
+
+### カスタマイズ
+
+#### ソースコードの取得から反映
+
+*対象のアプリの「Deploy」タブの「Deploy using Heroku Git」に参考にしてください。*
+
+以下、簡単にまとめたものを記載します。
+
+1. Heroku CLI をインストールします。
+1. ソースコードをクローンします。
+    * コンソール（コマンドプロンプト）から下記のコマンドを打ち込んでください。
+   ```
+      heroku git:clone -a <<アプリ名>>
+   ```
+1. ソースコードを修正します。
+   * index.php を修正してください。
+1. HerokuへPUSHします。
+    * コンソール（コマンドプロンプト）から下記のコマンドを打ち込んでください。
+   ```
+      git add .
+      git commit -am "<<コメント>>"
+      git push heroku master
+   ```
+
+#### 動作のデバッグ（ログの確認）
+
+1. コンソール（コマンドプロンプト）から下記のコマンドを打つと実行時のログが閲覧できます。
+    ```
+       heroku logs -t
+    ```
+
 ## 環境変数
 
 本アプリでは下記の環境変数を使用します。
@@ -122,3 +153,9 @@ docomo Developer support：https://dev.smt.docomo.ne.jp/
 
 MITライセンスです。
 
+## 注意事項
+
+本文の内容及びアプリを使用したことによる如何なる問題に関しても@ryohosは責任を負いません。
+ご理解の上、確認及びご使用ください。
+
+また、本文は2017年6月28日の内容を最新として記載しております。
